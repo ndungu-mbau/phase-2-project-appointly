@@ -1,7 +1,13 @@
+// export const Login = () => {
+//   return (
+//     <div>
+//       <h1>Login</h1>
+//     </div>
+//   );
+// };
+
+import React, {useState} from 'react';
+
 export const Login = () => {
-  return (
-    <div>
-      <h1>Login</h1>
-    </div>
-  );
-};
+  // variables for username/ email and password 
+}
