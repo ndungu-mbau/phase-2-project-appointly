@@ -6,20 +6,22 @@
 //   );
 // };
 
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 
 export const Login = () => {
-  // variables for username/ email and password 
-  const [username, setUsername] = useState ('');
-  const [password, setPassword] = useState ('');
+  // variables for email, password, and confirmation email
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [confirmEmail, setConfirmEmail] = useState('');
 
   // function to handle form submission
   const handleSubmit = (event) => {
-    event.preventDefault ();
+    event.preventDefault();
 
     // add logic to handle form submission
-    console.log ('Username:', username);
-    console.log ('Password:', password);
+    console.log('Email:', email);
+    console.log('Password:', password);
+    console.log('Confirmation Email:', confirmEmail);
   };
 
   return (
@@ -27,13 +29,27 @@ export const Login = () => {
       <h1 className="text-2xl font-semibold mb-4">Login</h1>
       <form onSubmit={handleSubmit}>
         <div className="mb-4">
-          <label htmlFor="username" className="block text-sm font-medium text-gray-700">Username or Email:</label>
+          <label htmlFor="email" className="block text-sm font-medium text-gray-700">Email:</label>
           <input
-            type="text"
-            id="username"
-            name="username"
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
+            type="email"
+            id="email"
+            name="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+            className="mt-1 px-3 py-2 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50"
+          />
+        </div>
+
+        {/* Additional input field for confirmation email */}
+        <div className="mb-4">
+          <label htmlFor="confirmEmail" className="block text-sm font-medium text-gray-700">Confirm Email:</label>
+          <input
+            type="email"
+            id="confirmEmail"
+            name="confirmEmail"
+            value={confirmEmail}
+            onChange={(e) => setConfirmEmail(e.target.value)}
             required
             className="mt-1 px-3 py-2 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50"
           />
@@ -50,8 +66,7 @@ export const Login = () => {
             required
             className="mt-1 px-3 py-2 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50"
           />
-
-          </div>
+        </div>
         <button
           type="submit"
           className="w-full py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-500 hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
