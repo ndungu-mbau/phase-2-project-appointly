@@ -10,4 +10,7 @@ import React, {useState} from 'react';
 
 export const Login = () => {
   // variables for username/ email and password 
+  const [username, setUsername] = useState ('');
+  const [password, setPassword] = useState ('');
+
 }
