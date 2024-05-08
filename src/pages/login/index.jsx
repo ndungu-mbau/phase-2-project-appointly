@@ -22,4 +22,23 @@ export const Login = () => {
     console.log ('Password:', password);
   };
 
+  return (
+    <div className='max-w-md mx-auto mt-8 p-6 bg-white rounded-lg shadow-md'>
+       <h1 className="text-2xl font-semibold mb-4">Login</h1>
+      <form onSubmit={handleSubmit}>
+        <div className="mb-4">
+          <label htmlFor="username" className="block text-sm font-medium text-gray-700">Username or Email:</label>
+          <input
+            type="text"
+            id="username"
+            name="username"
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}
+            required
+            className="mt-1 px-3 py-2 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50"
+          />
+
+    </div>
+  )
+
 }
