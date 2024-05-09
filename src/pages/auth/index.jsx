@@ -57,7 +57,7 @@ const login = () => {
     })
     .catch((error) => {
       // Handle login errors
-    );
+   });
 };
 
 const logout = () => {
