@@ -57,7 +57,7 @@ const login = () => {
     })
     .catch((error) => {
       // Handle login errors
-    });
+    );
 };
 
 const logout = () => {
@@ -89,7 +89,7 @@ export const Auth = () => {
   }
   if (user) {
     return (
-      
+
       <div>
         <p>Current User: {user.email}</p>
         <button onClick={logout}>Log out</button>
