@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function SignUpPage() {
+export function SignUpPage() {
   const [formData, setFormData] = useState({
     username: "",
     email: "",
@@ -104,5 +104,3 @@ function SignUpPage() {
     </div>
   );
 }
-
-export default SignUpPage;
