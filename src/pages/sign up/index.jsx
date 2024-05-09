@@ -15,4 +15,11 @@ function signup () {
         setFormData ({...formData, [name]: value});
     };
 
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        // handle form submision 
+        console.log (formData);
+        // submission logic
+    };
+
 }
