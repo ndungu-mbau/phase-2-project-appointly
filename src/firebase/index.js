@@ -10,4 +10,4 @@ const auth = getAuth(app);
 //Initialize firestore
 const firestore = getFirestore(app);
 
-export { auth, firestore };
+export { auth, firestore, app };
