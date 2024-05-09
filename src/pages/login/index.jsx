@@ -79,10 +79,10 @@ export const Login = () => {
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
 
+
   // function to handle form submission
   const handleSubmit = (event) => {
-    event.preventDefault();
-
+    event.preventDefualt
     // add logic to handle form submission
     console.log('Email:', email);
     console.log('Password:', password);
@@ -102,6 +102,7 @@ export const Login = () => {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
+
             className="mt-1 px-3 py-2 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50"
           />
         </div>
