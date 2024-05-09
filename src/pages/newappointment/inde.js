@@ -11,5 +11,18 @@ function newappointments () {
         
     });
 
+    const handleChange = (e) => {
+        const {name, value } = e.target;
+        setFormData ({...formData, [name]: value});
+
+    };
+
+    const handleSubmit = (e) => {
+        e.preventDefault ();
+        // handle form submission 
+        console.log (formData);
+        // submisson logic
+    };
+
     
 }
