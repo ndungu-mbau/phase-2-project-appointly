@@ -18,6 +18,10 @@ export const Sidebar = () => {
       aria-label="Sidebar"
     >
       <div className="h-full px-3 py-4 overflow-y-auto bg-gray-50 dark:bg-gray-800">
+        <h1 className="text-4xl font-bold text-gray-900 dark:text-white p-4 mb-6">
+          Appointly
+        </h1>
+        <hr className="mb-6" />
         <ul className="space-y-2 font-medium">
           {LINKS.map((link) => {
             return (
